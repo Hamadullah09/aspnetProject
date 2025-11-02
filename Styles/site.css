@@ -1,0 +1,410 @@
+/* General Styles */
+:root {
+  --admin-color: #2c3e50;
+--faculty-color: #3498db;
+  --it-color: #27ae60;
+  --danger-color: #e74c3c;
+  --warning-color: #f39c12;
+  --success-color: #27ae60;
+  --info-color: #3498db;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+min-height: 100vh;
+}
+
+/* Navbar Styles */
+.navbar {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+backdrop-filter: blur(10px);
+}
+
+.navbar-admin {
+  background: linear-gradient(90deg, var(--admin-color) 0%, #34495e 100%);
+}
+
+.navbar-faculty {
+  background: linear-gradient(90deg, var(--faculty-color) 0%, #2980b9 100%);
+}
+
+.navbar-it {
+  background: linear-gradient(90deg, var(--it-color) 0%, #229954 100%);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+color: white !important;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85) !important;
+  transition: all 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+.nav-link:hover {
+  color: white !important;
+  transform: translateY(-2px);
+}
+
+.navbar-user {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  margin-right: 1rem;
+}
+
+/* Container Styles */
+.container, .container-fluid {
+  max-width: 1200px;
+  margin-top: 2rem;
+}
+
+/* Card Styles */
+.card {
+  border: none;
+border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-header {
+  background: linear-gradient(90deg, #f8f9fa 0%, #ecf0f1 100%);
+  border-bottom: 2px solid #e0e0e0;
+  font-weight: 600;
+  padding: 1.5rem;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+/* Form Styles */
+.form-control, .form-select {
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+padding: 0.75rem 1rem;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: var(--info-color);
+box-shadow: 0 0 0 0.2rem rgba(52, 152, 219, 0.25);
+}
+
+.form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+/* Button Styles */
+.btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+cursor: pointer;
+  text-decoration: none;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, var(--info-color) 0%, #2980b9 100%);
+  color: white;
+}
+
+.btn-success {
+  background: linear-gradient(90deg, var(--success-color) 0%, #229954 100%);
+color: white;
+}
+
+.btn-danger {
+  background: linear-gradient(90deg, var(--danger-color) 0%, #c0392b 100%);
+  color: white;
+}
+
+.btn-warning {
+  background: linear-gradient(90deg, var(--warning-color) 0%, #e67e22 100%);
+  color: white;
+}
+
+.btn-sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+/* Table Styles */
+.table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table thead {
+  background: linear-gradient(90deg, #f8f9fa 0%, #ecf0f1 100%);
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.table tbody tr {
+  transition: background 0.2s ease;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.table tbody tr:hover {
+  background: #f8f9fa;
+}
+
+.table td, .table th {
+  vertical-align: middle;
+  padding: 1rem;
+}
+
+/* Status Badge Styles */
+.badge {
+  padding: 0.5rem 1rem;
+border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.badge-pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.badge-progress {
+  background-color: #cfe2ff;
+  color: #084298;
+}
+
+.badge-resolved {
+  background-color: #d1e7dd;
+  color: #0f5132;
+}
+
+/* Login Page Styles */
+.login-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+min-height: 100vh;
+  padding: 1rem;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: white;
+  border-radius: 15px;
+box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-header h2 {
+  color: #2c3e50;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.login-header p {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-link {
+  color: var(--info-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.form-link:hover {
+  color: #2980b9;
+}
+
+/* Alert Styles */
+.alert {
+  border: none;
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+font-weight: 500;
+}
+
+.alert-success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border-left: 4px solid #198754;
+}
+
+.alert-danger {
+  background-color: #f8d7da;
+  color: #842029;
+border-left: 4px solid #dc3545;
+}
+
+.alert-warning {
+  background-color: #fff3cd;
+  color: #664d03;
+  border-left: 4px solid #ffc107;
+}
+
+.alert-info {
+  background-color: #cfe2ff;
+color: #084298;
+  border-left: 4px solid #0dcaf0;
+}
+
+/* Dashboard Styles */
+.dashboard-header {
+  margin-bottom: 2rem;
+}
+
+.dashboard-header h1 {
+  color: #2c3e50;
+font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.dashboard-header p {
+  color: #7f8c8d;
+  font-size: 1.05rem;
+}
+
+/* Stats Cards */
+.stat-card {
+  background: white;
+border-radius: 12px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+border-top: 4px solid var(--info-color);
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--info-color);
+  margin: 0.5rem 0;
+}
+
+.stat-label {
+  color: #7f8c8d;
+  font-size: 0.95rem;
+font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.75rem 1rem;
+}
+
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+
+  .nav-link {
+    margin: 0.25rem 0;
+}
+
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .login-card {
+    padding: 1.5rem;
+}
+
+  .table {
+    font-size: 0.9rem;
+  }
+
+  .table td, .table th {
+    padding: 0.75rem 0.5rem;
+}
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+}
+
+  .container, .container-fluid {
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 0.95rem;
+}
+
+  .login-card {
+    padding: 1.25rem;
+  }
+
+  .login-header h2 {
+    font-size: 1.5rem;
+}
+
+  .card-body {
+    padding: 1rem;
+  }
+
+  .table {
+    font-size: 0.8rem;
+    overflow-x: auto;
+}
+
+  .btn {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+  .dashboard-header h1 {
+    font-size: 1.75rem;
+  }
+}
